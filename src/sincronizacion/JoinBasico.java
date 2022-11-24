@@ -1,3 +1,5 @@
+package sincronizacion;
+
 public class JoinBasico extends Thread {
 
     private int id;
