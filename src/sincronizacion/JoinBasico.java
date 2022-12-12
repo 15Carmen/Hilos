@@ -13,15 +13,15 @@ public class JoinBasico extends Thread {
     }
 
     public void suspenderHilo(Thread hiloReferencia) {
-        this.suspender = true;
-        this.hiloReferencia = hiloReferencia;
+        this.suspender=true;
+        this.hiloReferencia=hiloReferencia;
     }
 
     @Override
     public void run() {
         try {
-            for (int i = 0; i < 3; i++) {
-                if (suspender) {
+            for(int i=0; i<3; i++) {
+                if(suspender) {
                     hiloReferencia.join();
                 }
                 System.out.printf("Hilo %d. Iteración %d \n", id, i);
